@@ -1,0 +1,4 @@
+name,battery_mAh,battery_V,avg_drain_mA,lifetime_days,meets_target,warnings
+"18650 3400 mAh",3400,3.7,0.47772,266.9,false,2
+"3x AA alkaline 2500 mAh",2500,4.5,0.393639,211.7,false,2
+"LiPo 2000 mAh",2000,3.7,0.43939,170.7,false,2

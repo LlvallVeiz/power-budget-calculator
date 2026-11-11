@@ -1,0 +1,10 @@
+Scenario comparison (ranked by lifetime)
+============================================================
+
+Best: 18650 3400 mAh — 266.9 days
+
+Scenario                           Battery      Drain       Lifetime     vs best
+--------------------------------------------------------------------------------
+18650 3400 mAh                     3400 mAh     477.7 uA    266.9 d      100.0%
+3x AA alkaline 2500 mAh            2500 mAh     393.6 uA    211.7 d      79.3%
+LiPo 2000 mAh                      2000 mAh     439.4 uA    170.7 d      64.0%

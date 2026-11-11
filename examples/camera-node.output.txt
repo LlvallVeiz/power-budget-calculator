@@ -1,0 +1,36 @@
+Power budget — ESP32-CAM node, photo + Wi-Fi TX every 1 min
+============================================================
+
+Lifetime: 3.4 days
+Target:   30 days — NOT MET
+Capacity needed for target: 18046 mAh (currently 2000 mAh)
+
+Load profile (per cycle)
+  cycle: 60 s, 1440 cycles/day
+  average current: 21.017 mA  peak: 250 mA
+  average power: 69.355 mW  energy: 1664.5 mWh/day
+  dominant mode: capture-tx
+    - sleep: 200 uA for 55 s (91.67% duty, 0.9% of charge)
+    - capture-tx: 250 mA for 5 s (8.33% duty, 99.1% of charge)
+
+Regulator — Synchronous buck 3.7 V -> 3.3 V, 85% efficient
+  type: buck, efficiency: 85.0% (effective 85.0%), Iq: 10 uA
+  average battery-side current: 22.062 mA
+  average loss: 12.276 mW
+
+Battery
+  rated: 2000 mAh at 3.7 V (7400 mWh)
+  Peukert capacity: 2000 mAh (n = 1.02)
+  temperature: 25 C (factor 1)
+  usable capacity: 1800 mAh (90% usable)
+  self-discharge: 2.00%/month = 54.8 uA
+
+Drain breakdown
+  load: 22.062 mA (99.8%)
+  self-discharge: 54.8 uA (0.3%)
+  total: 22.117 mA
+  peak battery current: 262.331 mA
+
+Warnings
+  [ERROR] TARGET_NOT_MET: Lifetime 3.4 days is below the target of 30 days — increase capacity, lengthen the sleep cycle, or cut TX current.
+  [INFO] TX_DOMINATES: Transmission dominates the energy budget (capture-tx mode) — lengthening the TX interval is the highest-leverage change.

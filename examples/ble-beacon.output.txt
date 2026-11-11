@@ -1,0 +1,34 @@
+Power budget — BLE beacon, advertising every 1 s (3x AA alkaline)
+============================================================
+
+Lifetime: 2.39 years
+Target:   365 days — MET
+
+Load profile (per cycle)
+  cycle: 1 s, 86400 cycles/day
+  average current: 85 uA  peak: 15 mA
+  average power: 0.28 mW  energy: 6.7 mWh/day
+  dominant mode: tx
+    - sleep: 10 uA for 0.995 s (99.50% duty, 11.9% of charge)
+    - tx: 15 mA for 0.005 s (0.50% duty, 88.1% of charge)
+
+Regulator — Ultra-low-Iq LDO 4.5 V -> 3.3 V
+  type: ldo, efficiency: 73.3% (effective 71.7%), Iq: 2 uA
+  average battery-side current: 87 uA
+  average loss: 0.111 mW
+
+Battery
+  rated: 2500 mAh at 4.5 V (11.25 Wh)
+  Peukert capacity: 2500 mAh (n = 1.15)
+  temperature: 25 C (factor 1)
+  usable capacity: 2000 mAh (80% usable)
+  self-discharge: 0.25%/month = 8.6 uA
+
+Drain breakdown
+  load: 87 uA (91.0%)
+  self-discharge: 8.6 uA (9.0%)
+  total: 95.5 uA
+  peak battery current: 15.002 mA
+
+Warnings
+  [INFO] TX_DOMINATES: Transmission dominates the energy budget (tx mode) — lengthening the TX interval is the highest-leverage change.

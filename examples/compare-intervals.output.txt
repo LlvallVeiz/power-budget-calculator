@@ -1,0 +1,11 @@
+Scenario comparison (ranked by lifetime)
+============================================================
+
+Best: TX every 6 hours — 813.1 days
+
+Scenario                           Battery      Drain       Lifetime     vs best
+--------------------------------------------------------------------------------
+TX every 6 hours                   3400 mAh     156.8 uA    813.1 d      100.0%
+TX every 1 hour                    3400 mAh     202.7 uA    629.2 d      77.4%
+TX every 10 min                    3400 mAh     477.7 uA    266.9 d      32.8%
+TX every 1 min                     3400 mAh     3.448 mA    37 d         4.6%
